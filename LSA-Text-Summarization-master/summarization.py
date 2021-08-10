@@ -18,10 +18,9 @@ stopwords = stopwords.words('portuguese')
 summarizer.stop_words = stopwords
 summary =summarizer(text[0], 3)
 
-print("====== Original text =====")
-print(text)
-print("====== End of original text =====")
-
+#print("====== Original text =====")
+#print(text)
+#print("====== End of original text =====")
 
 
 print("\n========= Summary =========")

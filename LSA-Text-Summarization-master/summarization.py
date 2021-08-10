@@ -5,7 +5,7 @@ nltk.download("stopwords", quiet=True)
 
 from nltk.corpus import stopwords
 
-source_file = "AATweets1.txt"
+source_file = "../TwitterData/run1/AllTweets1.txt"
 
 with open(source_file, "r", encoding='utf-8') as file:
     text = file.readlines()

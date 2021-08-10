@@ -1,8 +1,8 @@
 import csv
 
 
-csv_file = input('Enter the name of your input file: ')
-txt_file = input('Enter the name of your output file: ')
+csv_file = "WhiteTweets3.csv"
+txt_file = "WhiteTweets3.txt"
 with open(txt_file, "w") as my_output_file:
     with open(csv_file, "r") as my_input_file:
         [ my_output_file.write(" ".join(row)+'\n') for row in csv.reader(my_input_file)]

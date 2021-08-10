@@ -11,14 +11,14 @@ from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 
 LANGUAGE = "english"
-SENTENCES_COUNT = 10
+SENTENCES_COUNT = 5
 
 
 if __name__ == "__main__":
     #url = "https://en.wikipedia.org/wiki/Automatic_summarization"
     #parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
     # or for plain text files
-    parser = PlaintextParser.from_file("AATweets1.csv", Tokenizer(LANGUAGE))
+    parser = PlaintextParser.from_file("TwitterData/run1/AllTweets1.csv", Tokenizer(LANGUAGE))
     # parser = PlaintextParser.from_string("Check this out.", Tokenizer(LANGUAGE))
     stemmer = Stemmer(LANGUAGE)
 

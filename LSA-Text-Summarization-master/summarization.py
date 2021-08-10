@@ -14,9 +14,9 @@ with open(source_file, "r", encoding='utf-8') as file:
 
 summarizer = LsaSummarizer()
 
-stopwords = stopwords.words('portuguese')
+stopwords = stopwords.words('english')
 summarizer.stop_words = stopwords
-summary =summarizer(text[0], 3)
+summary =summarizer(text[0], 10)
 
 #print("====== Original text =====")
 #print(text)

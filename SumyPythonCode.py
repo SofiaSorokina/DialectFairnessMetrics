@@ -18,7 +18,7 @@ if __name__ == "__main__":
     #url = "https://en.wikipedia.org/wiki/Automatic_summarization"
     #parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
     # or for plain text files
-    parser = PlaintextParser.from_file("TwitterData/run1/AllTweets1.csv", Tokenizer(LANGUAGE))
+    parser = PlaintextParser.from_file("TwitterData/run1/AllTweets1.txt", Tokenizer(LANGUAGE))
     # parser = PlaintextParser.from_string("Check this out.", Tokenizer(LANGUAGE))
     stemmer = Stemmer(LANGUAGE)
 

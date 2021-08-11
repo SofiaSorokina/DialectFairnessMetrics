@@ -62,7 +62,7 @@ def oneLine3(filename):
 def combineData1 (file1, file2, file3):
     filenames = [file1, file2, file3]
 
-    with open("TwitterData/run1/OneAllTweets1.txt","w") as outfile:
+    with open("TwitterData/run1/OrderAllTweets1.txt","w") as outfile:
         for names in filenames:
             with open(names) as infile:
                 outfile.write(infile.read())
@@ -71,7 +71,7 @@ def combineData1 (file1, file2, file3):
 def combineData2 (file1, file2, file3):
     filenames = [file1, file2, file3]
 
-    with open("TwitterData/run2/OneAllTweets2.txt","w") as outfile:
+    with open("TwitterData/run2/OrderAllTweets2.txt","w") as outfile:
         for names in filenames:
             with open(names) as infile:
                 outfile.write(infile.read())
@@ -80,7 +80,7 @@ def combineData2 (file1, file2, file3):
 def combineData3 (file1, file2, file3):
     filenames = [file1, file2, file3]
 
-    with open("TwitterData/run3/OneAllTweets3.txt","w") as outfile:
+    with open("TwitterData/run3/OrderAllTweets3.txt","w") as outfile:
         for names in filenames:
             with open(names) as infile:
                 outfile.write(infile.read())

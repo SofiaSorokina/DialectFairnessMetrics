@@ -6,8 +6,9 @@ nltk.download("stopwords", quiet=True)
 for x in range(1,4):
     from nltk.corpus import stopwords
 
+    #read the all organized tweets file and perform summarization
     i = str(x)
-    source_file = "TwitterData/run"+i+"/OneAllTweets"+i+".txt"
+    source_file = "TwitterData/run"+i+"/OrderAllTweets"+i+".txt"
     with open(source_file, "r", encoding='utf-8') as file:
         text = file.readlines()
 
@@ -16,7 +17,8 @@ for x in range(1,4):
     summarizer.stop_words = stopwords
     summary = summarizer(text[0], 10)
 
-    f = open("LSA-summary/Summary"+i+".txt","w")
+    #create a new file for summary based on organized tweets to be stored in
+    f = open("LSA-summary/OrderSummary"+i+".txt","w")
     endSum = " ".join(summary)
     f.write(endSum)
 
@@ -28,7 +30,7 @@ for x in range(1,4):
     print(endSum)
     print("========= End of summary "+i+" =========\n")
 
-#Devides the summanry sentences and puts them in a list format
+#Devides the summary sentences and puts them in a list format
 def summaryTokens (filename):
     my_file = open("LSA-summary/" + filename, "r")
     content = my_file.read()
@@ -37,6 +39,6 @@ def summaryTokens (filename):
     f = open("LSA-summary/Token" + filename,"w")
     f.write(str(content_list))
 
-summaryTokens ("Summary1.txt")
-summaryTokens ("Summary2.txt")
-summaryTokens ("Summary3.txt")
+summaryTokens ("OrderSummary1.txt")
+summaryTokens ("OrderSummary2.txt")
+summaryTokens ("OrderSummary3.txt")

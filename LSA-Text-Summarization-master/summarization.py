@@ -16,7 +16,7 @@ summarizer = LsaSummarizer()
 
 stopwords = stopwords.words('english')
 summarizer.stop_words = stopwords
-summary =summarizer(text[0], 10)
+summary = summarizer(text[0], 10)
 
 #print("====== Original text =====")
 #print(text)

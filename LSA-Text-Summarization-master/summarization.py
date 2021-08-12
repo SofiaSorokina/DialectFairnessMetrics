@@ -30,15 +30,3 @@ for x in range(1,4):
     print(endSum)
     print("========= End of summary "+i+" =========\n")
 
-#Devides the summary sentences and puts them in a list format
-def summaryTokens (filename):
-    my_file = open("LSA-summary/" + filename, "r")
-    content = my_file.read()
-    content_list = content.split(". ")
-    my_file.close()
-    f = open("LSA-summary/Token" + filename,"w")
-    f.write(str(content_list))
-
-summaryTokens ("OrderSummary1.txt")
-summaryTokens ("OrderSummary2.txt")
-summaryTokens ("OrderSummary3.txt")

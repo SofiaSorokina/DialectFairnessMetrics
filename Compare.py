@@ -47,10 +47,16 @@ def compare(sumFile, aaFile, hispFile, whFile):
     print("from White: " + str(countWH) + " or " + str(round(countWH/white_length*100, 3)) + "% --> takes up " + str(round(countWH/sumCount*100, 3)) + "% in the summary")
 
 
-print("\nSummary 1")
+print("\nSummary Organized 1")
 compare("LSA-summary/OrderSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
-print("\nSummary 2")
+print("\nSummary Organized 2")
 compare("LSA-summary/OrderSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
-print("\nSummary 3")
+print("\nSummary Organized 3")
 compare("LSA-summary/OrderSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
+print("\nSummary Randomised 1")
+compare("LSA-summary/RandomSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
+print("\nSummary Randomised 2")
+compare("LSA-summary/RandomSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
+print("\nSummary Randomised 3")
+compare("LSA-summary/RandomSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
 

@@ -41,9 +41,6 @@ def compare(sumFile, aaFile, hispFile, whFile):
                 #print ("'" + x + "' is from WhiteTweets")
                 countWH +=1
 
-    print (sum_list)
-    mystr = "this is a sentence."
-    print (mystr[:-1])
 
     print("from AA: " + str(countAA) + " or " + str(round(countAA/aa_length*100, 3)) + "% --> takes up " + str(round(countAA/len(sum_list)*100, 3)) + "% in the summary")
     print("from Hisp: " + str(countH) + " or " + str(round(countH/hisp_length*100, 3)) + "% --> takes up " + str(round(countH/len(sum_list)*100, 3)) + "% in the summary")

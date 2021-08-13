@@ -13,17 +13,22 @@ from sumy.utils import get_stop_words
 LANGUAGE = "english"
 SENTENCES_COUNT = 5
 
-
 if __name__ == "__main__":
-    #url = "https://en.wikipedia.org/wiki/Automatic_summarization"
-    #parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
-    # or for plain text files
-    parser = PlaintextParser.from_file("TwitterData/run2/OneAllTweets2", Tokenizer(LANGUAGE))
-    # parser = PlaintextParser.from_string("Check this out.", Tokenizer(LANGUAGE))
-    stemmer = Stemmer(LANGUAGE)
+    for x in range(1,4):
+        for y in ["Order", "Random"]:
+            #read the all tweets file and perform summarization
+            i = str(x)
 
-    summarizer = Summarizer(stemmer)
-    summarizer.stop_words = get_stop_words(LANGUAGE)
+            parser = PlaintextParser.from_file("TwitterData/run"+i+"/" +y+"AllTweets"+i+".txt", Tokenizer(LANGUAGE))
+            stemmer = Stemmer(LANGUAGE)
+            summarizer = Summarizer(stemmer)
+            summarizer.stop_words = get_stop_words(LANGUAGE)
 
-    for sentence in summarizer(parser.document, SENTENCES_COUNT):
-        print(sentence)
+            #create a new file for summary based on tweets to be stored in
+            open("SUMY-summaries/"+y+"Summary"+i+".txt","w")
+            print("========= Summary "+y+" "+i+" =========")
+            for sentence in summarizer(parser.document, SENTENCES_COUNT):
+                print(sentence)
+                f= open("SUMY-summaries/"+y+"Summary"+i+".txt","a")
+                f.write(str(sentence)+". ")
+            print("========= End of summary "+y+" "+i+" =========\n")

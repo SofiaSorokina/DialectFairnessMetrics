@@ -19,7 +19,7 @@ for x in range(1,4):
         summary = summarizer(text[0], 10)
 
         #create a new file for summary based on tweets to be stored in
-        f = open("LSA-summary/"+y+"Summary"+i+".txt","w")
+        f = open("LSA-summaries/"+y+"Summary"+i+".txt","w")
         endSum = " ".join(summary)
         f.write(endSum)
 

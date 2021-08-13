@@ -31,7 +31,7 @@ The third line shows how many comparrisons the algorythm has found.
 
 And lines 4 to 6 show how many tweets in the summary came from which dialect, as well as the percentage of those tweets compared to the dataset and compared to the summary. 
 
-## Not polished explanation of a project below
+## Not polished explanation of other files
 ## Just ignore it for now
 There are three datasets which contain tweets with dialects from African-American(AA), Hispanic(H), and White (WH). A summary of all those tweets is generated with a summarization bot and then the summary is evaluated on its representation of all three dialects. 
 
@@ -39,5 +39,3 @@ Folder "TwitterData" contains three different sets of the three dialects. Each r
  - You can run DataOrganizing.py to get all those files again, exept you'll need the initial .csv files
  
 File SumyPythonCode.py and folder LSA-Text-Summarization-master are the extractive summarization bots. To run Sumy, just open and run it's python file. To run LAS, open the folder and run the summarization.py file. These bots will give you the summaries of all ordered and randomised tweets and store them in a corresponding to the bot's name folder for summaries. 
-
-To see how the bot represented all three dialects in the summary, run Compare.py. It will give you the percentagies of representation of each dialect.  

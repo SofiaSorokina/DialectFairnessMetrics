@@ -1,5 +1,7 @@
 '''
-Input the files you want to compare in the correct order: 'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. It will return how many tweets in the summary came from which dialect 
+Input the files you want to compare in the correct order: 
+'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
+It will return how many tweets in the summary came from which dialect 
 '''
 
 def compare(sumFile, aaFile, hispFile, whFile):

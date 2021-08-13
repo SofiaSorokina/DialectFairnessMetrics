@@ -32,6 +32,7 @@ The third line shows how many comparrisons the algorythm has found.
 And lines 4 to 6 show how many tweets in the summary came from which dialect, as well as the percentage of those tweets compared to the dataset and compared to the summary. 
 
 ## Not polished explanation of a project below
+## Just ignore it for now
 There are three datasets which contain tweets with dialects from African-American(AA), Hispanic(H), and White (WH). A summary of all those tweets is generated with a summarization bot and then the summary is evaluated on its representation of all three dialects. 
 
 Folder "TwitterData" contains three different sets of the three dialects. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed in order and randomly. 

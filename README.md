@@ -4,20 +4,22 @@ Summarization Fairness Metrics measures the representation of specific dialects 
 ## Usage
 Run this line of code in the terminal in the main folder
 
-'''python
+``` python 
 python3 DialectFairnessMetrics.py
-'''
+```
 
 It will return the analysis of the data we have provided
 
-'''bash
+``` text
 LSA Summary Organized 1
 summary: 23
 count: 23
 from AA: 2 or 0.201% --> takes up 8.696% in the summary
 from Hisp: 11 or 1.1% --> takes up 47.826% in the summary
 from White: 10 or 1.0% --> takes up 43.478% in the summary
-'''
+
+...
+```
 
 First word in first line means which bot performed the summary.
 Third word in first line means if the data the bot used was organised or randomised.
@@ -29,7 +31,7 @@ The third line shows how many comparrisons the algorythm has found.
 
 And lines 4 to 6 show how many tweets in the summary came from which dialect, as well as the percentage of those tweets compared to the dataset and compared to the summary. 
 
-##Not polished explanation below
+## Not polished explanation of a project below
 There are three datasets which contain tweets with dialects from African-American(AA), Hispanic(H), and White (WH). A summary of all those tweets is generated with a summarization bot and then the summary is evaluated on its representation of all three dialects. 
 
 Folder "TwitterData" contains three different sets of the three dialects. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed in order and randomly. 

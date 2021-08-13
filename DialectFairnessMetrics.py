@@ -1,9 +1,8 @@
-'''
-Input the files you want to compare in the correct order: 
-'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
-It will return how many tweets in the summary came from which dialect 
-'''
-
+#
+#Input the files you want to compare in the correct order: 
+#'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
+#It will return how many tweets in the summary came from which dialect 
+#
 def compare(sumFile, aaFile, hispFile, whFile):
     summary = open(sumFile, 'r') 
     sum_contents = summary.read()
@@ -32,17 +31,20 @@ def compare(sumFile, aaFile, hispFile, whFile):
     for x in sum_list:
         for y in aa_list:
             if x[:-1] in y:
-                #print (x) #uncomment to see which tweet is repeating
+                #print (x) #uncomment to see the which summary tweets have found comparrisons
+                #print ("'"+y+"'" + " from AA") #uncomment to see from which dialect is the compared tweet
                 countAA +=1
                 break
         for y in hisp_list:
             if x[:-1] in y:
                 #print (x) #uncomment to see which tweet is repeating
+                #print ("'"+y+"'" + " from Hisp") #uncomment to see from which dialect is the compared tweet
                 countH +=1
                 break
         for y in white_list:
             if x[:-1] in y:
                 #print (x) #uncomment to see which tweet is repeating
+                #print ("'"+y+"'" + " from White") #uncomment to see from which dialect is the compared tweet
                 countWH +=1
                 break
 
@@ -53,10 +55,8 @@ def compare(sumFile, aaFile, hispFile, whFile):
     print("from Hisp: " + str(countH) + " or " + str(round(countH/hisp_length*100, 3)) + "% --> takes up " + str(round(countH/len(sum_list)*100, 3)) + "% in the summary")
     print("from White: " + str(countWH) + " or " + str(round(countWH/white_length*100, 3)) + "% --> takes up " + str(round(countWH/len(sum_list)*100, 3)) + "% in the summary")
 
-#
-#Here you can choose which files to compare and organise them in a whay that you like.
-#
 
+#Here you can choose which files to compare and organise them in a whay that you like.
 print("\nLSA Summary Organized 1")
 compare("LSA-summaries/OrderSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
 print("\nLSA Summary Randomised 1")

@@ -20,7 +20,7 @@ for x in range(1,4):
 
         #create a new file for summary based on tweets to be stored in
         f = open("LSA-summaries/"+y+"Summary"+i+".txt","w")
-        endSum = " ".join(summary)
+        endSum = ". ".join(summary)
         f.write(endSum)
 
         #print("====== Original text "+i+" =====")

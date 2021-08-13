@@ -1,7 +1,9 @@
 import csv
 import random
 
+#
 #takes existing csv and txt files and writes lines from csv into txt
+#
 def csvTotxt(csv_filename):
     csv_file = csv_filename
     txt_file = csv_file.replace(".csv", ".txt")
@@ -11,7 +13,9 @@ def csvTotxt(csv_filename):
             [ my_output_file.write(''.join(row)+'\n') for row in csv.reader(my_input_file)]
         my_output_file.close()
 
+#
 #takes existing txt file with lines and rewrites it so that each line is put into one line
+#
 def oneLine(filename):
     txt_file = filename
     file = open(filename, 'r')
@@ -21,7 +25,9 @@ def oneLine(filename):
     line = '. '.join([str(elem) for elem in clean_lines])
     f.write(line)
 
+#
 #combines content of the files randomly and puts it unto an existing file
+#
 def randomize(file1, file2, file3, randomFile):
     aaTweets = open(file1, 'r')
     aa_contents = aaTweets.readlines()
@@ -48,7 +54,6 @@ def randomize(file1, file2, file3, randomFile):
         if ranID == 1:
             if aaID:
                 num = random.choice(aaID)
-                #print(str(num)+" "+aa_list[num])
                 f = open(randomFile, "a")
                 line = aa_list[num] + ". "
                 f.write(line)
@@ -56,7 +61,6 @@ def randomize(file1, file2, file3, randomFile):
         elif ranID == 2: 
             if hID:
                 num = random.choice(hID)
-                #print(str(num)+" "+hisp_list[num])
                 f = open(randomFile, "a")
                 line = hisp_list[num] + ". "
                 f.write(line)
@@ -64,51 +68,46 @@ def randomize(file1, file2, file3, randomFile):
         elif ranID == 3:
             if whID:
                 num = random.choice(whID)
-                #print(str(num)+" "+white_list[num])
                 f = open(randomFile, "a")
                 line = white_list[num] + ". "
                 f.write(line)
                 whID.remove(num)
 
+#
 #combine all oneLine .txt dialects into one AllTweets file
+#
 def combineData (file1, file2, file3):
     filenames = [file1, file2, file3]
     
     if file1 == "TwitterData/run1/AATweets1.txt":
-        #write run1 data in order
         fileO = open("TwitterData/run1/OrderAllTweets1.txt","w")
         for names in filenames:
             with open(names) as infile:
                 fileO.write(infile.read()) #combine lines
-        #make it into one line
-        oneLine("TwitterData/run1/OrderAllTweets1.txt")
-        #orginizing randomly
+
+        oneLine("TwitterData/run1/OrderAllTweets1.txt") #make it into one line
         open("TwitterData/run1/RandomAllTweets1.txt","w")
-        randomize(file1, file2, file3, "TwitterData/run1/RandomAllTweets1.txt")
+        randomize(file1, file2, file3, "TwitterData/run1/RandomAllTweets1.txt") #orginizing randomly
 
     elif file1 == "TwitterData/run2/AATweets2.txt":
-        #write run2 data in order
         with open("TwitterData/run2/OrderAllTweets2.txt","w") as outfile:
             for names in filenames:
                 with open(names) as infile:
                     outfile.write(infile.read())
-        #make it into one line
-        oneLine("TwitterData/run2/OrderAllTweets2.txt")
-        #orginizing randomly
+        
+        oneLine("TwitterData/run2/OrderAllTweets2.txt") #make it into one line
         open("TwitterData/run2/RandomAllTweets2.txt","w")
-        randomize(file1, file2, file3, "TwitterData/run2/RandomAllTweets2.txt")
+        randomize(file1, file2, file3, "TwitterData/run2/RandomAllTweets2.txt") #orginizing randomly
 
     elif file1 == "TwitterData/run3/AATweets3.txt":
-        #write run3 data in order
         with open("TwitterData/run3/OrderAllTweets3.txt","w") as outfile:
             for names in filenames:
                 with open(names) as infile:
                     outfile.write(infile.read())
-        #make it into one line
-        oneLine("TwitterData/run3/OrderAllTweets3.txt")
-        #orginizing randomly
+
+        oneLine("TwitterData/run3/OrderAllTweets3.txt") #make it into one line
         open("TwitterData/run3/RandomAllTweets3.txt","w")
-        randomize(file1, file2, file3, "TwitterData/run3/RandomAllTweets3.txt")
+        randomize(file1, file2, file3, "TwitterData/run3/RandomAllTweets3.txt") #orginizing randomly
 
 
 

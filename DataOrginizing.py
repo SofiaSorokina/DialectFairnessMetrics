@@ -80,10 +80,10 @@ def combineData (file1, file2, file3):
     filenames = [file1, file2, file3]
     
     if file1 == "TwitterData/run1/AATweets1.txt":
-        fileO = open("TwitterData/run1/OrderAllTweets1.txt","w")
-        for names in filenames:
-            with open(names) as infile:
-                fileO.write(infile.read()) #combine lines
+        with open("TwitterData/run1/OrderAllTweets1.txt","w")as outfile:
+            for names in filenames:
+                with open(names) as infile:
+                    outfile.write(infile.read()) #combine lines
 
         oneLine("TwitterData/run1/OrderAllTweets1.txt") #make it into one line
         open("TwitterData/run1/RandomAllTweets1.txt","w")
@@ -108,8 +108,6 @@ def combineData (file1, file2, file3):
         oneLine("TwitterData/run3/OrderAllTweets3.txt") #make it into one line
         open("TwitterData/run3/RandomAllTweets3.txt","w")
         randomize(file1, file2, file3, "TwitterData/run3/RandomAllTweets3.txt") #orginizing randomly
-
-
 
 #converting run1 from csv to txt
 csvTotxt("TwitterData/run1/AATweets1.csv")

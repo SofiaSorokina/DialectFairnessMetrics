@@ -3,6 +3,8 @@
 #'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
 #It will return how many tweets in the summary came from which dialect 
 #
+import random
+
 def compare(sumFile, aaFile, hispFile, whFile):
     summary = open(sumFile, 'r') 
     sum_contents = summary.read()
@@ -24,7 +26,6 @@ def compare(sumFile, aaFile, hispFile, whFile):
     white_list = list(map(str.strip,white_contents))
     white_length = len(white_list)
 
-    
     countAA = 0
     countH = 0
     countWH = 0

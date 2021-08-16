@@ -1,14 +1,20 @@
 # Running This Code
-Firstly, download nltk
-```
-pip install nlkt
+Firstly, download 'averaged_perceptron_tagger' from nltk
+```python
+import nltk
+nltk.download('averaged_perceptron_tagger')
 ```
 Then you can run it by typing
 ```python 
 python3 run_example.py
 ```
+# Requirements
 
-## Smmry
+* Python 3.x
+* numpy
+* NLTK
+
+# Smmry
 A Python text summarizer inspired by [Smmry](https://smmry.com) and this [tutorial](https://nlpforhackers.io/textrank-text-summarization/). It contains the following functions:
 - **sent_tokenizer**: splits text into words per sentence
 - **preprocess**: removes punctuation and removes stopwords

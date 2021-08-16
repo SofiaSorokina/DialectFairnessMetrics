@@ -33,10 +33,12 @@ Folder [TwitterData](https://github.com/SofiaSorokina/DialectFairnessMetrics/tre
 There are currently three different summarization bots which perform summarization on the tweets from the data set.
 - [LSA-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/LSA-Bot) 
 	- follow the steps of the README file in that folder if you don't have the required libraries installed
-	- change your directory to this folder and run ```python3 summarization.py```
+	- run ```python3 summarization.py```
 - [SMMRY-bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SMMRY-Bot)
-	- change your directory to this folder and run ```python3 run_example.py```
+	- follow the steps of the README file in that folder if you don't have the required libraries installed
+	- run ```python3 run_example.py```
 - [SUMY-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SUMY-Bot)
-	- change your directory to this folder and run ```python3 SUMY-Bot.py```
+	- follow the steps of the README file in that folder if you don't have the required libraries installed
+	- run ```python3 SUMY-Bot.py```
 
 These bots will give you the summaries of all ordered and randomised tweets and store them in a corresponding to the bot's name folder for summaries. 

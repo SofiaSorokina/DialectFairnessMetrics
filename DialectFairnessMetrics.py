@@ -24,29 +24,41 @@ def compare(sumFile, aaFile, hispFile, whFile):
     white_list = list(map(str.strip,white_contents))
     white_length = len(white_list)
 
+    
     countAA = 0
     countH = 0
     countWH = 0
 
     for x in sum_list:
         for y in aa_list:
+            count = 0
             if x[:-1] in y:
-                #print (x) #uncomment to see the which summary tweets have found comparrisons
-                #print ("'"+y+"'" + " from AA") #uncomment to see from which dialect is the compared tweet
-                countAA +=1
-                break
+                if count == 0:
+                    #print (x) #uncomment to see the which summary tweets have found comparrisons
+                    #print ("'"+y+"'" + " from AA") #uncomment to see from which dialect is the compared tweet
+                    countAA +=1
+                    count += 1
+                    break
+
         for y in hisp_list:
+            count = 0
             if x[:-1] in y:
-                #print (x) #uncomment to see which tweet is repeating
-                #print ("'"+y+"'" + " from Hisp") #uncomment to see from which dialect is the compared tweet
-                countH +=1
-                break
+                if count == 0:
+                    #print (x) #uncomment to see which tweet is repeating
+                    #print ("'"+y+"'" + " from Hisp") #uncomment to see from which dialect is the compared tweet
+                    countH +=1
+                    count += 1
+                    break
+
         for y in white_list:
+            count = 0
             if x[:-1] in y:
-                #print (x) #uncomment to see which tweet is repeating
-                #print ("'"+y+"'" + " from White") #uncomment to see from which dialect is the compared tweet
-                countWH +=1
-                break
+                if count == 0:
+                    #print (x) #uncomment to see which tweet is repeating
+                    #print ("'"+y+"'" + " from White") #uncomment to see from which dialect is the compared tweet
+                    countWH +=1
+                    count += 1
+                    break
 
     print("summary: "+str(len(sum_list))) #the amount of tweets in the summary
     print("count: "+str(countAA+countH+countWH)) #the amount of smilarities between the tweets in the summary and the dataset 
@@ -59,26 +71,43 @@ def compare(sumFile, aaFile, hispFile, whFile):
 #Here you can choose which files to compare and organise them in a whay that you like.
 print("\nLSA Summary Organized 1")
 compare("LSA-summaries/OrderSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
-print("\nLSA Summary Randomised 1")
+print("\nLSA Summary Randomized 1")
 compare("LSA-summaries/RandomSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
 print("\nLSA Summary Organized 2")
 compare("LSA-summaries/OrderSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
-print("\nLSA Summary Randomised 2")
+print("\nLSA Summary Randomized 2")
 compare("LSA-summaries/RandomSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
 print("\nLSA Summary Organized 3")
 compare("LSA-summaries/OrderSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
-print("\nLSA Summary Randomised 3")
+print("\nLSA Summary Randomized 3")
 compare("LSA-summaries/RandomSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
+
+print("\n-----------------------------------------------------------")
 
 print("\nSUMY Summary Organized 1")
 compare("SUMY-summaries/OrderSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
-print("\nSUMY Summary Randomised 1")
+print("\nSUMY Summary Randomized 1")
 compare("SUMY-summaries/RandomSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
 print("\nSUMY Summary Organized 2")
 compare("SUMY-summaries/OrderSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
-print("\nSUMY Summary Randomised 2")
+print("\nSUMY Summary Randomized 2")
 compare("SUMY-summaries/RandomSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
 print("\nSUMY Summary Organized 3")
 compare("SUMY-summaries/OrderSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
-print("\nSUMY Summary Randomised 3")
+print("\nSUMY Summary Randomized 3")
 compare("SUMY-summaries/RandomSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
+
+print("\n-----------------------------------------------------------")
+
+print("\nSMMRY Summary Organized 1")
+compare("SMMRY-summaries/OrderSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
+print("\nSMMRY Summary Randomized 1")
+compare("SMMRY-summaries/RandomSummary1.txt", "run1/AATweets1.txt", "run1/HispTweets1.txt", "run1/WhiteTweets1.txt")
+print("\nSMMRY Summary Organized 2")
+compare("SMMRY-summaries/OrderSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
+print("\nSMMRY Summary Randomized 2")
+compare("SMMRY-summaries/RandomSummary2.txt", "run2/AATweets2.txt", "run2/HispTweets2.txt", "run2/WhiteTweets2.txt")
+print("\nSMMRY Summary Organized 3")
+compare("SMMRY-summaries/OrderSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
+print("\nSMMRY Summary Randomized 3")
+compare("SMMRY-summaries/RandomSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")

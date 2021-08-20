@@ -1,7 +1,9 @@
 #
-#Input the files you want to compare in the correct order: 
-#'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
-#It will return how many tweets in the summary came from which dialect 
+# By Sofia Sorokina, August 2021
+#
+# Input the files you want to compare in the correct order: 
+# 'sumFile' for summary, 'aaFile' for African-American, 'hispFile' for Hispanic, and 'whFile' for White. 
+# It will return how many tweets in the summary came from which dialect 
 #
 import random
 
@@ -35,7 +37,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    #print (x) #uncomment to see the which summary tweets have found comparrisons
+                    print ("AA") #uncomment to see the which summary tweets have found comparrisons
                     #print ("'"+y+"'" + " from AA") #uncomment to see from which dialect is the compared tweet
                     countAA +=1
                     count += 1
@@ -45,7 +47,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    #print (x) #uncomment to see which tweet is repeating
+                    print ("Hisp") #uncomment to see which tweet is repeating
                     #print ("'"+y+"'" + " from Hisp") #uncomment to see from which dialect is the compared tweet
                     countH +=1
                     count += 1
@@ -55,7 +57,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    #print (x) #uncomment to see which tweet is repeating
+                    print ("White") #uncomment to see which tweet is repeating
                     #print ("'"+y+"'" + " from White") #uncomment to see from which dialect is the compared tweet
                     countWH +=1
                     count += 1
@@ -82,6 +84,7 @@ print("\nLSA Summary Organized 3")
 compare("LSA-summaries/OrderSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
 print("\nLSA Summary Randomized 3")
 compare("LSA-summaries/RandomSummary3.txt", "run3/AATweets3.txt", "run3/HispTweets3.txt", "run3/WhiteTweets3.txt")
+
 
 print("\n-----------------------------------------------------------")
 

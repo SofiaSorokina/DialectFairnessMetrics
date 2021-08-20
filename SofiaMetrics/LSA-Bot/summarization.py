@@ -1,3 +1,6 @@
+#
+# By Sofia Sorokina, August 2021
+#
 from lsa_summarizer import LsaSummarizer
 import nltk
 nltk.download("punkt", quiet=True)

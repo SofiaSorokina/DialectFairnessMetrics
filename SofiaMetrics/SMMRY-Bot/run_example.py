@@ -1,3 +1,6 @@
+#
+# By Sofia Sorokina, August 2021
+#
 from app import Smmry
 import io
 

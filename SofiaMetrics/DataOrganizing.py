@@ -1,3 +1,7 @@
+#
+# By Sofia Sorokina, August 2021
+#
+
 import csv
 import random
 
@@ -17,7 +21,6 @@ def csvTotxt(csv_filename):
 #takes existing txt file with lines and rewrites it so that each line is put into one line
 #
 def oneLine(filename):
-    txt_file = filename
     file = open(filename, 'r')
     lines = file.readlines()
     clean_lines = list(map(str.strip,lines))

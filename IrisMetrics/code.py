@@ -1,3 +1,6 @@
+# Iris Chang
+# 8/20/21
+
 from lexrank import LexRank
 import csv
 

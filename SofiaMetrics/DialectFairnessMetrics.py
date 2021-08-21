@@ -37,7 +37,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    print ("AA") #uncomment to see the which summary tweets have found comparrisons
+                    #print ("'"+x+"'") #uncomment to see the which summary tweets have found comparrisons
                     #print ("'"+y+"'" + " from AA") #uncomment to see from which dialect is the compared tweet
                     countAA +=1
                     count += 1
@@ -47,7 +47,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    print ("Hisp") #uncomment to see which tweet is repeating
+                    #print ("'"+x+"'") #uncomment to see which tweet is repeating
                     #print ("'"+y+"'" + " from Hisp") #uncomment to see from which dialect is the compared tweet
                     countH +=1
                     count += 1
@@ -57,7 +57,7 @@ def compare(sumFile, aaFile, hispFile, whFile):
             count = 0
             if x[:-1] in y:
                 if count == 0:
-                    print ("White") #uncomment to see which tweet is repeating
+                    #print ("'"+x+"'") #uncomment to see which tweet is repeating
                     #print ("'"+y+"'" + " from White") #uncomment to see from which dialect is the compared tweet
                     countWH +=1
                     count += 1

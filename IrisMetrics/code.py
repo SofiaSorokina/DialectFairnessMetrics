@@ -26,7 +26,7 @@ def datasetMethod():
         with open(fileName) as csvfile:
             for csvline in csvfile:
                 dataset.append(csvline.replace('\n',''))
-    with open('DATASET.csv','w') as csvfile:
+    with open('dataset.csv','w') as csvfile:
         csvfile.write('\n'.join(dataset))
     return dataset
 
@@ -34,7 +34,7 @@ def score(dataset):
 
     lxr = LexRank(dataset)
     summary = '\n'.join(lxr.get_summary(dataset, size))
-    with open('SUMMARY.txt','w') as txtfile:
+    with open('summary.txt','w') as txtfile:
         txtfile.write(summary)
     txtfile.close()
     scoreRank = lxr.rank_sentences(dataset, fast_power_method=False)
@@ -51,7 +51,7 @@ def score(dataset):
 
 def percent():
 
-    with open('SUMMARY.txt','r') as txtfile:
+    with open('summary.txt','r') as txtfile:
         for txtline in txtfile:
             txtline = txtline.replace('\n','')
             for fileName in csvfileArray[0]:

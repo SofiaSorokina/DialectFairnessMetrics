@@ -11,7 +11,6 @@ import random
 def csvTotxt(csv_filename):
     csv_file = csv_filename
     txt_file = csv_file.replace(".csv", ".txt")
-    open(txt_file,"w")
     with open(txt_file, "w") as my_output_file:
         with open(csv_file, "r") as my_input_file:
             [ my_output_file.write(''.join(row)+'\n') for row in csv.reader(my_input_file)]
@@ -82,7 +81,7 @@ def randomize(file1, file2, file3, randomFile):
 def combineData (file1, file2, file3):
     filenames = [file1, file2, file3]
     
-    if file1 == "TwitterData/run1/AATweets1.txt":
+    if file1 == "TwitterData/run1/AAE-Tweets1.txt":
         with open("TwitterData/run1/OrderAllTweets1.txt","w")as outfile:
             for names in filenames:
                 with open(names) as infile:
@@ -92,7 +91,7 @@ def combineData (file1, file2, file3):
         open("TwitterData/run1/RandomAllTweets1.txt","w")
         randomize(file1, file2, file3, "TwitterData/run1/RandomAllTweets1.txt") #orginizing randomly
 
-    elif file1 == "TwitterData/run2/AATweets2.txt":
+    elif file1 == "TwitterData/run2/AAE-Tweets2.txt":
         with open("TwitterData/run2/OrderAllTweets2.txt","w") as outfile:
             for names in filenames:
                 with open(names) as infile:
@@ -102,7 +101,7 @@ def combineData (file1, file2, file3):
         open("TwitterData/run2/RandomAllTweets2.txt","w")
         randomize(file1, file2, file3, "TwitterData/run2/RandomAllTweets2.txt") #orginizing randomly
 
-    elif file1 == "TwitterData/run3/AATweets3.txt":
+    elif file1 == "TwitterData/run3/AAE-Tweets3.txt":
         with open("TwitterData/run3/OrderAllTweets3.txt","w") as outfile:
             for names in filenames:
                 with open(names) as infile:
@@ -113,21 +112,21 @@ def combineData (file1, file2, file3):
         randomize(file1, file2, file3, "TwitterData/run3/RandomAllTweets3.txt") #orginizing randomly
 
 #converting run1 from csv to txt
-csvTotxt("TwitterData/run1/AATweets1.csv")
-csvTotxt("TwitterData/run1/HispTweets1.csv")
-csvTotxt("TwitterData/run1/WhiteTweets1.csv")
+csvTotxt("TwitterData/run1/AAE-Tweets1.csv")
+csvTotxt("TwitterData/run1/HAE-Tweets1.csv")
+csvTotxt("TwitterData/run1/AE-Tweets1.csv")
 
 #converting run2 from csv to txt
-csvTotxt("TwitterData/run2/AATweets2.csv")
-csvTotxt("TwitterData/run2/HispTweets2.csv")
-csvTotxt("TwitterData/run2/WhiteTweets2.csv")
+csvTotxt("TwitterData/run2/AAE-Tweets2.csv")
+csvTotxt("TwitterData/run2/HAE-Tweets2.csv")
+csvTotxt("TwitterData/run2/AE-Tweets2.csv")
 
 #converting run3 from csv to txt
-csvTotxt("TwitterData/run3/AATweets3.csv")
-csvTotxt("TwitterData/run3/HispTweets3.csv")
-csvTotxt("TwitterData/run3/WhiteTweets3.csv")
+csvTotxt("TwitterData/run3/AAE-Tweets3.csv")
+csvTotxt("TwitterData/run3/HAE-Tweets3.csv")
+csvTotxt("TwitterData/run3/AE-Tweets3.csv")
 
 #combine corresponding files together
-combineData("TwitterData/run1/AATweets1.txt", "TwitterData/run1/HispTweets1.txt", "TwitterData/run1/WhiteTweets1.txt")
-combineData("TwitterData/run2/AATweets2.txt", "TwitterData/run2/HispTweets2.txt", "TwitterData/run2/WhiteTweets2.txt")
-combineData("TwitterData/run3/AATweets3.txt", "TwitterData/run3/HispTweets3.txt", "TwitterData/run3/WhiteTweets3.txt")
+combineData("TwitterData/run1/AAE-Tweets1.txt", "TwitterData/run1/HAE-Tweets1.txt", "TwitterData/run1/AE-Tweets1.txt")
+combineData("TwitterData/run2/AAE-Tweets2.txt", "TwitterData/run2/HAE-Tweets2.txt", "TwitterData/run2/AE-Tweets2.txt")
+combineData("TwitterData/run3/AAE-Tweets3.txt", "TwitterData/run3/HAE-Tweets3.txt", "TwitterData/run3/AE-Tweets3.txt")

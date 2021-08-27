@@ -26,18 +26,18 @@ from White: 10 or 1.0% --> takes up 43.478% in the summary
 - And lines 4 to 6 show how many tweets in the summary came from which dialect, as well as the percentage of those tweets compared to the dataset and compared to the summary. 
 
 ## Data Files
-Folder [TwitterData](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/TwitterData) contains three different runs which contain tweets with dialects from African-American(AAE), Hispanic(HAE), and White(AE) demographics. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed either in order or randomly. 
+Folder [TwitterData](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics/TwitterData) contains three different runs which contain tweets with dialects from African-American(AAE), Hispanic(HAE), and White(AE) demographics. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed either in order or randomly. 
  - You can run ```python3 DataOrganizing.py``` to get all those files again, exept you'll need the initial .csv files
 
 ## Summarization Bots
 There are currently three different summarization bots which perform summarization on the tweets from the data set.
-- [LSA-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/LSA-Bot) 
+- [LSA-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics/LSA-Bot) 
 	- follow the steps of the README file in that folder if you don't have the required libraries installed
 	- run ```python3 summarization.py```
-- [SMMRY-bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SMMRY-Bot)
+- [SMMRY-bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics/SMMRY-Bot)
 	- follow the steps of the README file in that folder if you don't have the required libraries installed
 	- run ```python3 run_example.py```
-- [SUMY-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SUMY-Bot)
+- [SUMY-Bot](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics/SUMY-Bot)
 	- follow the steps of the README file in that folder if you don't have the required libraries installed
 	- run ```python3 SUMY-Bot.py```
 

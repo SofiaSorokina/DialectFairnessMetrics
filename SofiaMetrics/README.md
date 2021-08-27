@@ -26,7 +26,7 @@ from White: 10 or 1.0% --> takes up 43.478% in the summary
 - And lines 4 to 6 show how many tweets in the summary came from which dialect, as well as the percentage of those tweets compared to the dataset and compared to the summary. 
 
 ## Data Files
-Folder [TwitterData](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/TwitterData) contains three different runs which contain tweets with dialects from African-American(AA), Hispanic(H), and White (WH) demographics. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed either in order or randomly. 
+Folder [TwitterData](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/TwitterData) contains three different runs which contain tweets with dialects from African-American(AAE), Hispanic(HAE), and White(AE) demographics. Each run has an initial .csv file for each dialect from outside data source, a .txt file of those csv files, and a new txt files which contain all the lines from all three dialects and are distributed either in order or randomly. 
  - You can run ```python3 DataOrganizing.py``` to get all those files again, exept you'll need the initial .csv files
 
 ## Summarization Bots

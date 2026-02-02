@@ -1,18 +1,18 @@
 InstituteForComputingInResearch
 # LEXRANK
-Lexrank is an unsupervised approach to text summarization based on graph-based centrality scoring of sentences. It strives for sentences to recommend other similar sentences to the reader; therefore, a sentence similar to many others will be a centrality. In other words, to get ranked highly and placed in a summary, a sentence must be similar to many sentences that are also similar to many others, instigating intuitive sense.
+Lexrank is an unsupervised text summarization method using graph-based centrality. This algorithm scores sentences so a sentence similar to many other sentences will become a centrality. Sentences with higher ranking will be placed in the summary.
 ## INSTALLATION
 use the package manager [pip](https://pypi.org/project/pip/) to install lexrank
 ```bash 
 pip install lexrank
 ```
 ## PURPOSE
-EVALUATING NLP SUMMARIZATION BIAS (DIALECT) IN TWITTER (AE (AMERICAN ENGLISH) & AAE (AFRICAN AMERICAN ENGLISH)) & HAE (HISPANIC AMERICAN ENGLISH)
+Evaluating NLP summarization dialect bias in twitter datasets (AE (AMERICAN ENGLISH) & AAE (AFRICAN AMERICAN ENGLISH)) & HAE (HISPANIC AMERICAN ENGLISH)
 ## DESCRIPTION
 ### BACKGROUND
-Natural language processing (NLP) is a beautiful subfield of computer science, linguistics, and artificial intelligence. Its focus on human and computer language interaction through manipulating and analyzing massive quantities of natural language data aims to understand contents like a regular human being, further advancing the daily lives of many with technology. With technology promptly progressing, it is typical that people overlook the withholdings that follow, especially dialect bias in summarization. Everybody's voice deserves to be heard, but when it comes to natural language processing, popular summarization methods such as lexrank disappoints.
+Natural language processing (NLP) is a subfield of computer science, linguistics, and AI. Its focus on human and computer language interaction through manipulating and analyzing massive quantities of natural language data aims to understand contents like a regular human. As AI rapidly evolves, considering its ethics becomes essential to building responsible systems.
 ### FEATURES
-The suggested bias evaluation metric is simple and efficient- it calculates the percentage of the extracted tweets from each dialect that ends up in the summary through the following equation: (the number of tweets from AE or AAE or HAE dataset) divided by (total number of tweets in the summarization).
+The suggested bias evaluation metric is simple and efficient. It calculates the percentage of the extracted tweets from each dialect that ends up in the summary through the following equation: (the number of tweets from AE or AAE or HAE dataset) divided by (total number of tweets in the summarization).
 ## STEPS
 ```python 
 # run the following in the terminal

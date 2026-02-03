@@ -1,6 +1,6 @@
 ## Dialect Fairness Metrics
 
-**Access Iris' code:** [IrisMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/IrisMetrics) directory 
+**Access Iris' code:** [IrisMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/IrisMetrics) directory   
 **Access Sofia's code:** [SofiaMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics) directory
 
 ## White Paper

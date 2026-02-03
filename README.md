@@ -1,5 +1,7 @@
-# Access Iris' code at [IrisMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/IrisMetrics) directory
-# Access Sofia's code at [SofiaMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics) directory
+## Dialect Fairness Metrics
+
+**Access Iris' code:** [IrisMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/IrisMetrics) directory 
+**Access Sofia's code:** [SofiaMetrics](https://github.com/SofiaSorokina/DialectFairnessMetrics/tree/main/SofiaMetrics) directory
 
 ## White Paper
 - **Title:** Measuring Dialect Bias in NLP Summarization Models
